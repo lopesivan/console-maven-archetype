@@ -29,5 +29,5 @@ $ mvn archetype:generate \
 Run project:
 
 ```bash
-$ mvn tomcat7:run
+$ mvn exec:java
 ```
