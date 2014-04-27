@@ -23,7 +23,7 @@ Create project based on this archetype
 $ mvn archetype:generate \
     -DarchetypeGroupId=project._42algoritmos \
     -DarchetypeArtifactId=console-app-archetype \
-    -DarchetypeVersion=1.0.1
+    -DarchetypeVersion=1.0.2
 ```
 
 Run project:
