@@ -7,7 +7,6 @@
     <version>${version}</version>
     <name>Console Application</name>
     <url>http://maven.apache.org</url>
-
     <developers>
         <developer>
             <email>ivan@42algoritmos.com.br</email>
@@ -16,7 +15,6 @@
             <url>http://www.42algoritmos.com.br</url>
         </developer>
     </developers>
-
     <properties>
         <main.class>br.com._42algoritmos.App</main.class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,7 +31,6 @@
         <local.deploy.dirname>/tmp</local.deploy.dirname>
         <remote.deploy.dirname>/tmp</remote.deploy.dirname>
     </properties>
-
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
@@ -69,9 +66,6 @@
                 </configuration>
             </plugin>
             <!--
-            ###################
-            ### jar autorun ###
-            ###################
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -104,12 +98,9 @@
                     </execution>
                 </executions>
             </plugin>
-            ################### -->
+            -->
 
             <!--
-            ##################
-            ### jar deploy ###
-            ##################
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
@@ -132,7 +123,7 @@
                     </execution>
                 </executions>
             </plugin>
-            ################### -->
+            -->
         </plugins>
     </build>
     <dependencies>
@@ -147,7 +138,7 @@
             <version>1.8.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency><!-- UNIT TEST-->
+        <dependency><!-- UNIT TEST -->
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
