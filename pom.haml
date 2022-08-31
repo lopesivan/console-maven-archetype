@@ -1,4 +1,10 @@
 !!! XML
+/
+  Document   : pom.haml
+  Created on : #{Time.new}
+  Author     : ivan
+  Description:
+  Purpose of the document follows.
 
 %project{
   :xmlns=>"http://maven.apache.org/POM/4.0.0",
@@ -15,10 +21,12 @@
   %name consoleapp-archetype
 
   %properties
-    - p = "project.build.sourceEncoding"
-    = "  <#{p}>UTF-8</#{p}>"
-    - p = "maven.archetype.plugin.version"
-    = "  <#{p}>2.2</#{p}>"
+    - t = "project.build.sourceEncoding"
+    - v = "UTF-8"
+    = "<#{t}>#{v}</#{t}>"
+    - t = "maven.archetype.plugin.version"
+    - v = "2.2"
+    = "<#{t}>#{v}</#{t}>"
 
   %build
     %extensions
