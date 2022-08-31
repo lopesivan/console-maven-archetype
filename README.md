@@ -1,6 +1,7 @@
 #console-maven-archetype
 
-Project provides Console aplication archetype for creating comand line aplications
+Project provides Console aplication archetype for creating
+comand line aplications
 
 ##Installation
 
@@ -23,7 +24,7 @@ Create project based on this archetype
 $ mvn archetype:generate \
     -DarchetypeGroupId=project._42algoritmos \
     -DarchetypeArtifactId=console-app-archetype \
-    -DarchetypeVersion=1.0.2
+    -DarchetypeVersion=1.0.4
 ```
 
 Run project:
