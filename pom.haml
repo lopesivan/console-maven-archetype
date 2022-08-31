@@ -1,0 +1,38 @@
+!!! XML
+
+%project{
+  :xmlns=>"http://maven.apache.org/POM/4.0.0",
+  :"xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance",
+  :"xsi:schemaLocation"=>"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  }
+
+  %modelVersion 4.0.0
+  %groupId project._42algoritmos
+  %artifactId console-app-archetype
+  %version 1.0.4
+  %packaging maven-archetype
+
+  %name consoleapp-archetype
+
+  %properties
+    - p = "project.build.sourceEncoding"
+    = "  <#{p}>UTF-8</#{p}>"
+    - p = "maven.archetype.plugin.version"
+    = "  <#{p}>2.2</#{p}>"
+
+  %build
+    %extensions
+      %extension
+        %groupId org.apache.maven.archetype
+        %artifactId archetype-packaging
+        %version ${maven.archetype.plugin.version}
+
+    %pluginManagement
+    %plugins
+      %plugin
+        %artifactId maven-archetype-plugin
+        %version ${maven.archetype.plugin.version}
+
+
+  %url http://maven.apache.org
+
