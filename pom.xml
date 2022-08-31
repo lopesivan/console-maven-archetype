@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 Document   : pom.haml
-Created on : 2022-08-31 02:47:13 -0300
+Created on : 2022-08-31 02:59:50 -0300
 Author     : ivan
 Description:
 Purpose of the document follows.
@@ -25,13 +25,14 @@ Purpose of the document follows.
         <version>${maven.archetype.plugin.version}</version>
       </extension>
     </extensions>
-    <pluginManagement/>
-    <plugins>
-      <plugin>
-        <artifactId>maven-archetype-plugin</artifactId>
-        <version>${maven.archetype.plugin.version}</version>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${maven.archetype.plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
   <url>http://maven.apache.org</url>
 </project>
