@@ -8,4 +8,6 @@ clean:
 	mvn $@
 
 jar:
-	mvn package -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
+	mvn jar:jar
+# jar:
+# 	mvn package -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
