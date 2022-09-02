@@ -24,7 +24,7 @@ src/main/resources/archetype-resources/src/main/resources/log4j2.xml: log4j2.ham
 	mkdir -p src/main/resources/archetype-resources/src/main/resources
 	haml -f xhtml --double-quote-attributes $^ | xmllint --format - > $@
 
-install:
+install:$(XML)
 	mvn install
 
 uninstall:
