@@ -25,6 +25,11 @@
       %includes
         %include **/*.*
 
+    %fileSet{:filtered=>"true", :packaged=>"true", :encoding=>"UTF-8"}
+      %directory .
+      %includes
+        %include Makefile
+
     -# Test
     %fileSet{:filtered=>"true", :packaged=>"true", :encoding=>"UTF-8"}
       %directory src/test/java
