@@ -5,8 +5,13 @@
   "README.md": {
     "type": "doc"
   },
+  "Makefile": {
+    "type": "mk"
+  },
   "*.haml": {
-    "type": "vim",
-    "run": "lua require('config.nvim_dev').app('haml',{'-f','xhtml','--double-quote-attributes','{file|basename}'})"
+    "type": "haml"
+  },
+  "src/main/resources/archetype-resources/src/main/java/App.java": {
+    "type": "app"
   }
 }
