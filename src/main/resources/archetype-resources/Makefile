@@ -7,3 +7,5 @@ run:
 clean:
 	mvn $@
 
+jar:
+	mvn package -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
