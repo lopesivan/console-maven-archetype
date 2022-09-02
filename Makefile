@@ -29,6 +29,7 @@ install:$(XML)
 
 uninstall:
 	rm -rf ${HOME}/.m2/repository/$(GROUPID)/$(ARTIFACTID)/$(VERSION)
+	mvn clean
 
 clean:
 	rm pom.xml

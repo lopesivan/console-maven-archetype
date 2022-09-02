@@ -27,5 +27,10 @@
 hs_err_pid*
 replay_pid*
 
-# End of https://www.toptal.com/developers/gitignore/api/java
 target/*
+pom.xml
+src/main/resources/META-INF/maven/archetype-metadata.xml
+src/main/resources/archetype-resources/pom.xml
+src/main/resources/archetype-resources/src/main/resources/log4j2.xml
+
+# End of https://www.toptal.com/developers/gitignore/api/java
