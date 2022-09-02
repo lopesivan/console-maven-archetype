@@ -71,3 +71,8 @@ $ mvn exec:java
                     └── goal.txt
 
     13 directories, 6 files
+
+Local
+
+    JAVA_HOME=$(jenv  javahome) ./mvnw compile
+    JAVA_HOME=$(jenv  javahome) ./mvnw exec:java
