@@ -1,0 +1,121 @@
+!!! XML
+/
+  Document   : pom.haml
+  Created on : #{Time.new}
+  Author     : ivan
+  Description:
+  Purpose of the document follows.
+
+%project{
+  :xmlns=>"http://maven.apache.org/POM/4.0.0",
+  :"xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance",
+  :"xsi:schemaLocation"=>"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  }
+
+  %modelVersion 4.0.0
+  %groupId ${groupId}
+  %artifactId ${artifactId}
+  %packaging jar
+  %version ${version}
+  %name Console Application
+  %url http://maven.apache.org
+
+  %developers
+    %developer
+      %email ivan@42algoritmos.com.br
+      %name Ivan Lopes
+      %timezone America/Sao_Paulo
+      %url http://ivanlopes.eng.br
+
+  - properties = { :description => "Nop!",
+    :parameters => [ ["main.class", "br.com._42algoritmos.App"],
+    ["project.build.sourceEncoding",  "UTF-8"],
+    ["java-version",                  "1.8"],
+    ["log4j.configurationFile",       "${basedir}/src/main/resources/log4j2.xml"],
+    ["junit.version",                 "4.11"],
+    ["log4j.version",                 "2.0-rc1"],
+    ["maven.dependency.plugin",       "2.5.1"],
+    ["maven.antrun.plugin.version",   "1.7"],
+    ["maven.jar.plugin.version",      "2.4"],
+    ["maven.compiler.plugin.version", "3.1"],
+    ["maven.javadoc.plugin.version",  "2.9.1"],
+    ["exec.maven.plugin.version",     "1.2.1"],
+    ["local.deploy.dirname",          "/tmp"],
+    ["remote.deploy.dirname",         "/tmp"],
+    ]}
+
+  %properties
+    - properties[:parameters].each do |t,v|
+      = "<%s>%s</%s>" % [t,v,t]
+
+  %build
+    %finalName ${project.artifactId}-${project.version}
+    %plugins
+
+      /
+        COMPILE RULES
+      %plugin
+        %groupId org.apache.maven.plugins
+        %artifactId maven-compiler-plugin
+        %version ${maven.compiler.plugin.version}
+        %configuration
+          %source ${java-version}
+          %target ${java-version}
+
+      /
+        Javadoc
+      %plugin
+        %groupId org.apache.maven.plugins
+        %artifactId maven-javadoc-plugin
+        %version ${maven.javadoc.plugin.version}
+        %executions
+          %execution
+            %id attach-javadoc
+            %phase verify
+            %goals
+              %goal jar
+
+      /
+        Execute java source by maven command line `mvn exec:java'
+      %plugin
+        %groupId org.codehaus.mojo
+        %artifactId exec-maven-plugin
+        %version ${exec.maven.plugin.version}
+        %configuration
+          %mainClass ${main.class}
+
+  %dependencies
+    /
+      SCP file to server
+    %dependency
+      %groupId org.apache.maven.plugins
+      %artifactId maven-antrun-plugin
+      %version ${maven.antrun.plugin.version}
+
+    /
+      SCP file to server
+    %dependency
+      %groupId org.apache.ant
+      %artifactId ant-jsch
+      %version 1.8.0
+      %scope provided
+
+    /
+      JUnit
+    %dependency
+      %groupId junit
+      %artifactId junit
+      %version ${junit.version}
+      %scope test
+
+    /
+      Log
+    %dependency
+      %groupId org.apache.logging.log4j
+      %artifactId log4j-api
+      %version ${log4j.version}
+
+    %dependency
+      %groupId org.apache.logging.log4j
+      %artifactId log4j-core
+      %version ${log4j.version}
