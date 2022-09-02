@@ -1,3 +1,7 @@
+VERSION    = 1.0.4
+GROUPID    = project/_42algoritmos
+ARTIFACTID = console-app-archetype
+
 XML=\
 	pom.xml \
 	src/main/resources/META-INF/maven/archetype-metadata.xml\
@@ -19,6 +23,9 @@ src/main/resources/archetype-resources/src/main/resources/log4j2.xml: log4j2.ham
 
 install:
 	mvn install
+
+uninstall:
+	rm -rf ${HOME}/.m2/repository/$(GROUPID)/$(ARTIFACTID)/$(VERSION)
 
 clean:
 	rm pom.xml
