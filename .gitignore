@@ -32,5 +32,6 @@ pom.xml
 src/main/resources/META-INF/maven/archetype-metadata.xml
 src/main/resources/archetype-resources/pom.xml
 src/main/resources/archetype-resources/src/main/resources/log4j2.xml
+!aux/.mvn/wrapper/maven-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/java
