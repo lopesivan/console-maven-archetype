@@ -1,0 +1,20 @@
+{
+  "./.projections.json": {
+    "type": "dit"
+  },
+  "README.md": {
+    "type": "doc"
+  },
+  "Makefile": {
+    "type": "mk"
+  },
+  "pom.xml": {
+    "type": "conf"
+  },
+  "src/main/resources/log4j2.xml": {
+    "type": "log"
+  },
+  "src/main/java/*.java": {
+    "type": "java"
+  }
+}

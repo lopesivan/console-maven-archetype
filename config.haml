@@ -30,6 +30,11 @@
       %includes
         %include Makefile
 
+    %fileSet{:filtered=>"true", :encoding=>"UTF-8"}
+      %directory/
+      %includes
+        %include .projections.json
+
     -# Test
     %fileSet{:filtered=>"true", :packaged=>"true", :encoding=>"UTF-8"}
       %directory src/test/java
