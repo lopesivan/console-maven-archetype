@@ -27,6 +27,19 @@ $ mvn archetype:generate \
     -DarchetypeVersion=1.0.4
 ```
 
+Não interativo
+
+```bash
+mvn archetype:generate \
+    -DarchetypeArtifactId=console-app-archetype \
+    -DartifactId="myproject" \
+    -DgroupId="br.eng.ivanlopes" \
+    -DarchetypeGroupId=project._42algoritmos \
+    -DarchetypeVersion="1.0.4" \
+    -DarchetypeCatalog=local \
+    -DinteractiveMode=false
+```
+
 Run project:
 
 ```bash

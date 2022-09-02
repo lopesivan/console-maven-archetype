@@ -36,3 +36,4 @@ clean:
 	rm src/main/resources/META-INF/maven/archetype-metadata.xml
 	rm src/main/resources/archetype-resources/pom.xml
 	rm src/main/resources/archetype-resources/src/main/resources/log4j2.xml
+	mvn clean
