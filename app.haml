@@ -34,6 +34,7 @@
     ["log4j.configurationFile",       "${basedir}/src/main/resources/log4j2.xml"],
     ["junit.version",                 "4.11"],
     ["log4j.version",                 "2.18.0"],
+    ["ant.jsch.version",              "1.8.0"],
     ["maven.dependency.plugin",       "2.5.1"],
     ["maven.antrun.plugin.version",   "1.7"],
     ["maven.jar.plugin.version",      "2.4"],
@@ -52,8 +53,7 @@
     %finalName ${project.artifactId}-${project.version}
     %plugins
 
-      /
-        COMPILE RULES
+      / COMPILE RULES
       %plugin
         %groupId org.apache.maven.plugins
         %artifactId maven-compiler-plugin
@@ -62,8 +62,7 @@
           %source ${java-version}
           %target ${java-version}
 
-      /
-        Javadoc
+      / Javadoc
       %plugin
         %groupId org.apache.maven.plugins
         %artifactId maven-javadoc-plugin
@@ -75,8 +74,7 @@
             %goals
               %goal jar
 
-      /
-        Execute java source by maven command line `mvn exec:java'
+      / Execute java source by maven command line `mvn exec:java'
       %plugin
         %groupId org.codehaus.mojo
         %artifactId exec-maven-plugin
@@ -85,31 +83,27 @@
           %mainClass ${main.class}
 
   %dependencies
-    /
-      SCP file to server
+    / SCP file to server
     %dependency
       %groupId org.apache.maven.plugins
       %artifactId maven-antrun-plugin
       %version ${maven.antrun.plugin.version}
 
-    /
-      SCP file to server
+    / SCP file to server
     %dependency
       %groupId org.apache.ant
       %artifactId ant-jsch
-      %version 1.8.0
+      %version ${ant.jsch.version}
       %scope provided
 
-    /
-      JUnit
+    / JUnit
     %dependency
       %groupId junit
       %artifactId junit
       %version ${junit.version}
       %scope test
 
-    /
-      Log
+    / Log
     %dependency
       %groupId org.apache.logging.log4j
       %artifactId log4j-api
