@@ -46,7 +46,9 @@
 
   %properties
     - properties[:parameters].each do |t,v|
+      -# = Haml::Engine.new("%"+t).render(self)
       = "<%s>%s</%s>" % [t,v,t]
+
 
   %build
     %finalName ${project.artifactId}-${project.version}
