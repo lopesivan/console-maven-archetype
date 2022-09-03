@@ -27,22 +27,21 @@
       %timezone America/Sao_Paulo
       %url http://ivanlopes.eng.br
 
-  - properties = { :description => "Nop!",
-    :parameters => [ ["main.class",   "${package}.App"],
-    ["project.build.sourceEncoding",  "UTF-8"],
-    ["java-version",                  "1.8"],
-    ["log4j.configurationFile",       "${basedir}/src/main/resources/log4j2.xml"],
-    ["junit.version",                 "4.11"],
-    ["log4j.version",                 "2.18.0"],
-    ["ant.jsch.version",              "1.8.0"],
-    ["maven.dependency.plugin",       "2.5.1"],
-    ["maven.antrun.plugin.version",   "1.7"],
-    ["maven.jar.plugin.version",      "2.4"],
-    ["maven.compiler.plugin.version", "3.1"],
-    ["maven.javadoc.plugin.version",  "2.9.1"],
-    ["exec.maven.plugin.version",     "1.2.1"],
-    ["local.deploy.dirname",          "/tmp"],
-    ["remote.deploy.dirname",         "/tmp"],
+  - properties = { :parameters => [ %w(main.class   ${package}.App),
+    %w(project.build.sourceEncoding  UTF-8),
+    %w(java-version                  1.8),
+    %w(log4j.configurationFile       ${basedir}/src/main/resources/log4j2.xml),
+    %w(junit.version                 4.11),
+    %w(log4j.version                 2.18.0),
+    %w(ant.jsch.version              1.8.0),
+    %w(maven.dependency.plugin       2.5.1),
+    %w(maven.antrun.plugin.version   1.7),
+    %w(maven.jar.plugin.version      2.4),
+    %w(maven.compiler.plugin.version 3.1),
+    %w(maven.javadoc.plugin.version  2.9.1),
+    %w(exec.maven.plugin.version     1.2.1),
+    %w(local.deploy.dirname          /tmp),
+    %w(remote.deploy.dirname         /tmp),
     ]}
 
   %properties
