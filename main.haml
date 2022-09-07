@@ -1,0 +1,11 @@
+
+You can add partials as embedded hamlinside existing template:
+
+For example, you have a view file called view.html.haml:
+
+
+%h2 This is the first view
+%h4 the following line 'inserts' an external code inside the view
+
+= Haml::Engine.new(File.read("partial.haml")).render(self)
+%h4 this text will appear next of partial
