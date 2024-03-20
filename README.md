@@ -24,7 +24,7 @@ Create project based on this archetype
 $ mvn archetype:generate \
     -DarchetypeGroupId=project._42algoritmos \
     -DarchetypeArtifactId=console-app-archetype \
-    -DarchetypeVersion=1.0.4
+    -DarchetypeVersion=1.0.5
 ```
 
 Não interativo
@@ -35,7 +35,7 @@ mvn archetype:generate \
     -DartifactId="myproject" \
     -DgroupId="br.eng.ivanlopes" \
     -DarchetypeGroupId=project._42algoritmos \
-    -DarchetypeVersion="1.0.4" \
+    -DarchetypeVersion="1.0.5" \
     -DarchetypeCatalog=local \
     -DinteractiveMode=false
 ```
