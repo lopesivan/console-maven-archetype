@@ -15,6 +15,7 @@ Install it to local Maven repository
 
 ```bash
 $ cd console-maven-archetype
+$ git checkout main
 $ mvn install
 ```
 
