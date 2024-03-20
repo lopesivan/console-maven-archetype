@@ -11,6 +11,7 @@ XML=\
 all: $(XML)
 
 pom.xml: installer.haml
+	sed 's/__VERSION__/$(VERSION)/' -i $^
 	haml -f xhtml --double-quote-attributes $^ | xmllint --format - > $@
 
 src/main/resources/META-INF/maven/archetype-metadata.xml: config.haml
